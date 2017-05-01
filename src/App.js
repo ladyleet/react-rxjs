@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import rxjsLogo from './rxjs-transparent.png';
 import './App.css';
 import NavBar from './NavBar';
+import ChangeTheme from './ChangeTheme';
 import { PunService } from './PunService';
 import { SpeechService } from './SpeechService';
 import { Subject } from 'rxjs/Subject';
@@ -65,28 +67,48 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="nav-bar-styling">
-          <a href="#">Home</a>
-          <a href="#">Puns</a>
-          <a href="#">Github</a>
+        
+        <div className="Right-align Font-75em">
+          <a className="Margin-left-right-10" href="#">HOME</a>
+          <a className="Margin-left-right-10" href="#">ABOUT</a>
+          <a className="Margin-left-right-10" href="#">CHANGE THEME</a>
+          <a className="Margin-left-right-10" href="http://github.com/ladyleet/react-rxjs">GITHUB</a>
         </div>
+        
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to the React and RxJS Pun App</h2>
+          <div className="Center-align">
+            <img src={rxjsLogo} className="App-logo" alt="logo" />
+            <h5 className="Rxjs-pink">PUN MACHINE BUILT WITH CREATE-REACT-APP AND RXJS</h5>
+          </div>
         </div>
-        <div> 
-        </div>
-        <div>
-          <input type="text" placeholder="Enter keywords!" onChange={this.keywordsInputChange$.next.bind(this.keywordsInputChange$)}/>
-          <button onClick={this.listenClick$.next.bind(this.listenClick$)}>
-            Listen to your own voice return a pun
+
+        <div className="Center-align">
+          <input className="Margin-left-right-10" type="text" placeholder="ENTER KEYWORDS" onChange={this.keywordsInputChange$.next.bind(this.keywordsInputChange$)}/>
+          <button className="Rxjs-pink-background White-text Margin-left-right-10" onClick={this.listenClick$.next.bind(this.listenClick$)}>
+            SEARCH BY VOICE
           </button>
-          {this.state.keywords}
-          {this.state.puns && this.state.puns.map((pun, i) => <div key={i}>
-            {pun.pun}
-            {pun.answer}
-          </div>)}
+          <button className="Rxjs-pink-background White-text Margin-left-right-10">
+            TAKE A PICTURE
+          </button>
         </div>
+         
+         <div>
+          <h5 className="Rxjs-pink">KEYWORDS AVAILABLE</h5>
+          <div>
+            {this.state.keywords}
+          </div>
+         </div>
+         
+         <div>
+           <h5 className="Rxjs-pink">HERE'S SOME PUNS</h5>
+           <div>
+             {this.state.puns && this.state.puns.map((pun, i) => <div key={i}>
+              {pun.pun}
+              {pun.answer}
+            </div>)}
+           </div>
+         </div>
+         
       </div>
     );
   }

@@ -1,27 +1,64 @@
 .App {
-  text-align: center;
+  font-family: Arial;
+  padding: 20px;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 175px;
+}
+
+.Margin-left-right-10 {
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+.Center-align {
+  text-align: center;
+}
+
+.Right-align {
+  text-align: right;
+}
+
+.Rxjs-pink {
+  color: #df0090;
+}
+
+.Rxjs-pink-background {
+  background-color: #df0090;
+}
+
+.Purple {
+  color:purple;
+}
+
+.Purple-background {
+  background-color: purple;
+}
+
+.Blue {
+  color:blue;
+}
+
+.Blue-background {
+  background-color: blue;
+}
+
+.White-text {
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.Margin-top-10 {
+  margin-top: 10px;
 }
 
-.nav-bar-styling {
-    background-color: teal;
-    color: white;
-    height: 3em;
+.Font-75em {
+  font-size: .75em;
 }
 
 @keyframes App-logo-spin {
